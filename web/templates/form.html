@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% block title %}Ballot Management System-CNOOC Brazil {% endblock %}
+{% block content %}
+    <form method="post">
+        <h3 align="center">Ballot Management System-CNOOC Brazil </h3>
+        <div class="form-group">
+            <label for="year">年份Year</label>
+            <input 
+                type="number"               
+                class="form-control"
+                id="year"
+                name="year"
+                required
+            >
+        </div>
+        <div class="form-group">
+            <label for="receivedDate">收到日期 Received date</label>
+            <input 
+                type="date"               
+                class="form-control"
+                id="receivedDate"
+                name="receivedDate"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="topic">主题Topic</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="topic"
+                name="topic"
+            >
+        </div>
+
+        
+        <div class="form-group">
+            <label for="profession">所属专业Profession</label>
+            <input type="text" list="profession" name="profession"  required/>
+            <datalist id="profession">
+                <option value="勘探">勘探</option>
+                <option value="开发">开发</option>
+                <option value="工程建设">工程建设</option>
+                <option value="钻完井">钻完井</option>
+                <option value="财务计划">财务计划</option>
+                <option value="行政管理">行政管理</option>
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="detailedProfessionCategory">具体分类Detailed Profession Categary</label>
+            <input type="text" list="detailedProfessionCategory" name="detailedProfessionCategory" required/>
+            <datalist id="detailedProfessionCategory">
+                <option value="自定义">自定义</option>
+                <option value="AAA">AAA</option>
+                <option value="BBB">BBB</option>
+                <option value="CCC">CCC</option>
+            </datalist>
+        </div>
+        
+        <div class="form-group">
+            <label for="tenderingList">投标商名单Tendering List</label>
+            <input type="text" class="form-control" id="tenderingList" name="tenderingList">
+        </div>
+
+        <div class="form-group">
+            <label for="winner">中标公司Winner</label>
+            <input type="text" class="form-control" id="winner" name="winner">
+        </div>
+
+        <div class="form-group">
+            <label for="scopeOfWork">工作范围Scope of Work</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="scopeOfWork"
+                name="scopeOfWork"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="majorTerms">主要合同条款Major Terms</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="majorTerms"
+                name="majorTerms"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="totalPrice">总价Total Price</label>
+            <input 
+                type="number"               
+                class="form-control"
+                id="totalPrice"
+                name="totalPrice"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="unitPrice">单价Unit Price</label>
+            <input 
+                type="number"               
+                class="form-control"
+                id="unitPrice"
+                name="unitPrice"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="currency">币种Currency</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="currency"
+                name="currency"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="exchangeRate">汇率Exchange Rate</label>
+            <input 
+                type="number"               
+                class="form-control"
+                id="exchangeRate"
+                name="exchangeRate"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="moblizationTime">动员时间Mobilization Time</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="moblizationTime"
+                name="moblizationTime"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="moblizationCost">动员费用Mobilization Cost</label>
+            <input 
+                type="number"               
+                class="form-control"
+                id="moblizationCost"
+                name="moblizationCost"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="tax">税费Tax</label>
+            <input 
+                type="number"               
+                class="form-control"
+                id="tax"
+                name="tax"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="localContent">本地化率Local Content</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="localContent"
+                name="localContent"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="handleDate">分发开始处理日期Handle date</label>
+            <input 
+                type="date"               
+                class="form-control"
+                id="handleDate"
+                name="handleDate"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="personInCharge">处理负责人Person in Charge</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="personInCharge"
+                name="personInCharge"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="internalApprovedDate">内部批复日期Internal Approved Date</label>
+            <input 
+                type="date"               
+                class="form-control"
+                id="internalApprovedDate"
+                name="internalApprovedDate"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="headOfficeApprovedDate"> 总部批复时间
+                （如需要）HeadOffice Approved Date(if required)</label>
+            <input 
+                type="date"               
+                class="form-control"
+                id="headOfficeApprovedDate"
+                name="headOfficeApprovedDate"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="responseDateToOperator">递交作业者日期Reponse Date to Operator</label>
+            <input 
+                type="date"               
+                class="form-control"
+                id="responseDateToOperator"
+                name="responseDateToOperator"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="remarks">备注Remarks</label>
+            <input 
+                type="text"               
+                class="form-control"
+                id="remarks"
+                name="remarks"
+            >
+        </div>
+
+        <br/>
+        <button type="submit" class="btn btn-primary">submit</button>
+        
+    </form>
+{% endblock %}

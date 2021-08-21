@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Chart{% endblock %}
+{% block content %}
+<form method="post">
+    <div>
+        <label for="startDate">Start Date</label>
+        <input 
+            type="date"               
+            class="form-control"
+            name="startDate"
+        >
+        <label for="endDate">End Date</label>
+        <input 
+            type="date"               
+            class="form-control"
+            name="endDate"
+        >
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Download Excel</button>
+    
+</form>
+
+{% endblock %}
