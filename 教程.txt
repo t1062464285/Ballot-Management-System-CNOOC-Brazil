@@ -1,0 +1,9 @@
+1.安装python: 
+https://www.codecademy.com/learn/paths/data-science?g_network=g&g_device=c&g_adid=525668108391&g_keyword=python%20programming%20language&g_acctid=243-039-7011&g_adtype=search&g_campaign=US+Language%3A+Pro+-+Exact&g_keywordid=kwd-1556933225&g_campaignid=10030170700&g_adgroupid=102526216698&utm_id=t_kwd-1556933225:ag_102526216698:cp_10030170700:n_g:d_c&utm_term=python%20programming%20language&utm_campaign=US%20Language%3A%20Pro%20-%20Exact&utm_source=google&utm_medium=paid-search&utm_content=525668108391&hsa_acc=2430397011&hsa_cam=10030170700&hsa_grp=102526216698&hsa_ad=525668108391&hsa_src=g&hsa_tgt=kwd-1556933225&hsa_kw=python%20programming%20language&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwyIKJBhBPEiwAu7zll4H-yVFULg7iJ6kGp9xaxwZ-5tc0dPYoOCS_wt5ImdLrUjILmJVTTRoCnggQAvD_BwE
+
+2.打开windows的cmd，安装sqlalchemy （ pip install sqlalchemy）,
+flask ( pip install flask), xlwt (pip install xlwt) 和 flask_login（pip install flask_login）。
+
+3.用cmd找到这个文件夹的路径，运行main.py  ( python main.py )
+
+4.前往cmd显示的域名查看网页 （比如 http://127.0.0.1:5000/ ）

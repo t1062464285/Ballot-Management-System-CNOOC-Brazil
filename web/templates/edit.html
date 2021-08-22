@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Ballot Management System-CNOOC Brazil {% endblock %}
 {% block content %}
+<br/>
+<h3 align="center">Search for an Existing Form </h3>
     <form method="post">
-        <h3 align="center">Ballot Management System-CNOOC Brazil </h3>
         <div class="form-group">
-            <label for="year">年份Year</label>
+            <label for="year">Year</label>
             <input 
                 type="number"               
                 class="form-control"
@@ -12,17 +13,35 @@
                 name="year"
                 required
             >
+            
         </div>
         <div class="form-group">
-            <label for="fileId">文件序号File Number</label>
+            <label for="fileId">File Number</label>
             <input 
                 type="number"               
                 class="form-control"
                 id="fileId"
                 name="fileId"
                 required
-            >
+            >          
         </div>
+        
+        <input type="hidden" name="operation" value="search">
+        <button type="submit" class="btn btn-primary">Search And Edit</button>     
+    </form>
+    <br/><br/>
+    <h3 align="center">Edit an Existing Form </h3>
+    <form method="post">
+        <input type="hidden" name="operation" value="edit">
+        <div class="form-group">
+            年份Year: {{render_form['year']}}         
+        </div>
+        <input type="hidden" name="year" value="{{render_form['year']}}">
+        <div class="form-group">
+            文件序号File Number: {{render_form['fileId']}}         
+        </div>
+        <input type="hidden" name="fileId" value="{{render_form['fileId']}}">
+
         <div class="form-group">
             <label for="receivedDate">收到日期 Received date</label>
             <input 
@@ -30,6 +49,7 @@
                 class="form-control"
                 id="receivedDate"
                 name="receivedDate"
+                value="{{render_form['receivedDate']}}"
             >
         </div>
 
@@ -40,13 +60,14 @@
                 class="form-control"
                 id="topic"
                 name="topic"
+                value="{{render_form['topic']}}"
             >
         </div>
 
         
         <div class="form-group">
             <label for="profession">所属专业Profession</label>
-            <input type="text" list="profession" name="profession"  required/>
+            <input type="text" list="profession" name="profession" value="{{render_form['profession']}}"  required/>
             <datalist id="profession">
                 <option value="勘探">勘探</option>
                 <option value="开发">开发</option>
@@ -59,7 +80,8 @@
 
         <div class="form-group">
             <label for="detailedProfessionCategory">具体分类Detailed Profession Categary</label>
-            <input type="text" list="detailedProfessionCategory" name="detailedProfessionCategory" required/>
+            <input type="text" list="detailedProfessionCategory" name="detailedProfessionCategory" 
+                value="{{render_form['detailedProfessionCategory']}}" required/>
             <datalist id="detailedProfessionCategory">
                 <option value="自定义">自定义</option>
                 <option value="AAA">AAA</option>
@@ -70,12 +92,12 @@
         
         <div class="form-group">
             <label for="tenderingList">投标商名单Tendering List</label>
-            <input type="text" class="form-control" id="tenderingList" name="tenderingList">
+            <input type="text" class="form-control" id="tenderingList" name="tenderingList" value="{{render_form['tenderingList']}}"> 
         </div>
 
         <div class="form-group">
             <label for="winner">中标公司Winner</label>
-            <input type="text" class="form-control" id="winner" name="winner">
+            <input type="text" class="form-control" id="winner" name="winner" value="{{render_form['winner']}}">
         </div>
 
         <div class="form-group">
@@ -85,6 +107,7 @@
                 class="form-control"
                 id="scopeOfWork"
                 name="scopeOfWork"
+                value="{{render_form['scopeOfWork']}}"
             >
         </div>
 
@@ -95,6 +118,7 @@
                 class="form-control"
                 id="majorTerms"
                 name="majorTerms"
+                value="{{render_form['majorTerms']}}"
             >
         </div>
 
@@ -105,6 +129,7 @@
                 class="form-control"
                 id="totalPrice"
                 name="totalPrice"
+                value="{{render_form['totalPrice']}}"
             >
         </div>
 
@@ -115,6 +140,7 @@
                 class="form-control"
                 id="unitPrice"
                 name="unitPrice"
+                value="{{render_form['unitPrice']}}"
             >
         </div>
 
@@ -125,6 +151,7 @@
                 class="form-control"
                 id="currency"
                 name="currency"
+                value="{{render_form['currency']}}"
             >
         </div>
 
@@ -135,6 +162,7 @@
                 class="form-control"
                 id="exchangeRate"
                 name="exchangeRate"
+                value="{{render_form['exchangeRate']}}"
             >
         </div>
 
@@ -145,6 +173,7 @@
                 class="form-control"
                 id="moblizationTime"
                 name="moblizationTime"
+                value="{{render_form['moblizationTime']}}"
             >
         </div>
 
@@ -155,6 +184,7 @@
                 class="form-control"
                 id="moblizationCost"
                 name="moblizationCost"
+                value="{{render_form['moblizationCost']}}"
             >
         </div>
 
@@ -165,6 +195,7 @@
                 class="form-control"
                 id="tax"
                 name="tax"
+                value="{{render_form['tax']}}"
             >
         </div>
 
@@ -175,6 +206,7 @@
                 class="form-control"
                 id="localContent"
                 name="localContent"
+                value="{{render_form['localContent']}}"
             >
         </div>
 
@@ -185,6 +217,7 @@
                 class="form-control"
                 id="handleDate"
                 name="handleDate"
+                value="{{render_form['handleDate']}}"
             >
         </div>
 
@@ -195,6 +228,7 @@
                 class="form-control"
                 id="personInCharge"
                 name="personInCharge"
+                value="{{render_form['personInCharge']}}"
             >
         </div>
 
@@ -205,6 +239,7 @@
                 class="form-control"
                 id="internalApprovedDate"
                 name="internalApprovedDate"
+                value="{{render_form['internalApprovedDate']}}"
             >
         </div>
 
@@ -216,6 +251,7 @@
                 class="form-control"
                 id="headOfficeApprovedDate"
                 name="headOfficeApprovedDate"
+                value="{{render_form['headOfficeApprovedDate']}}"
             >
         </div>
 
@@ -226,6 +262,7 @@
                 class="form-control"
                 id="responseDateToOperator"
                 name="responseDateToOperator"
+                value="{{render_form['responseDateToOperator']}}"
             >
         </div>
 
@@ -236,11 +273,12 @@
                 class="form-control"
                 id="remarks"
                 name="remarks"
+                value="{{render_form['remarks']}}"
             >
         </div>
 
         <br/>
-        <button type="submit" class="btn btn-primary">submit</button>
+        <button type="submit" class="btn btn-primary">save</button>
         
     </form>
 {% endblock %}

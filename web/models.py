@@ -8,6 +8,7 @@ sql table using sqlachemy
 class Form(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     year = db.Column(db.Integer)
+    fileId = db.Column(db.Integer)
     receivedDate = db.Column(db.Date)
     topic = db.Column(db.String(150))
     profession = db.Column(db.String(150))
@@ -37,3 +38,5 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
+    firstname = db.Column(db.String(150))
+    lastname = db.Column(db.String(150))
